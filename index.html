@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spelling Assistant</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+
+</head>
+
+<body>
+    <h1>Spelling Assistant</h1>
+
+    <div class="container">
+
+        <div class="container">
+            <form role="form">
+                <div class="form-group">
+                    <label for="comment">Write your words or paragraphs:</label>
+                    <textarea class="form-control" rows="5" id="word list">Separate your words/paragraphs like; this </textarea>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- Multiple Radios (inline) -->
+        <div class="container">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Options">Choose Your Options</label>
+                <div class="col-md-4">
+                    <label class="radio-inline" for="Options-0">
+                        <input type="radio" name="Options" id="Options-0" value="1" checked="checked"> Default
+                    </label>
+                    <label class="radio-inline" for="Options-1">
+                        <input type="radio" name="Options" id="Options-1" value="2"> Reverse
+                    </label>
+                    <label class="radio-inline" for="Options-2">
+                        <input type="radio" name="Options" id="Options-2" value="3"> Random
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="container">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submitbutton"></label>
+                <div class="col-md-4">
+                    <button id="submitbutton" name="submitbutton" onclick="createlist()" class="btn btn-info"> Start! </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="table" id="wordtable">
+                            <tbody>
+                                <tr class="success">
+                                    <td>John</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>Mary</td>
+                                </tr>
+                                <tr class="info">
+                                    <td>July</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <div id="currentword">
+                            <h3>Word Testing</h3>
+                        </div>
+                        <div id="timecount">
+                            <h4>Time</h4>
+                        </div>
+
+                        <div id="ttstag">
+                            <iframe src="http://translate.google.com/translate_tts?ie=UTF-8&q=Spelling%20Assistant&tl=en-gb">
+                                <p>Your browser does not support iframes.</p>
+                            </iframe>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="nextbutton"></label>
+                            <div class="col-md-8">
+                                <button id="nextbutton" name="nextbutton" onclick="nextword()" class="btn btn-success" disabled> Next </button>
+                                <button id="previousbutton" name="previousbutton" onclick="previousword()" class="btn btn-inverse" disabled>Previous</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script src="scripts/assistant.js"></script>
+</body>
+
+</html>
